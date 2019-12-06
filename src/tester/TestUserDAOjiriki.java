@@ -5,7 +5,7 @@ package tester;
 import dao.UserDAO;
 import model.UserBean;
 
-public class TestUserDAO {
+public class TestUserDAOjiriki {
 
 	public static UserBean userBean = new UserBean("userA", "1234", null, null);
 	public static UserBean insertUserBean = new UserBean("userC", "1123", "ゆーざーC", "userC@test.com");
