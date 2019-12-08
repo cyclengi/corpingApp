@@ -7,14 +7,19 @@ public class UserBean implements Serializable {
 	private String pass;
 	private String name;
 	private String mail;
-	
+
 	public UserBean() {};
-	
+
 	public UserBean(String userId, String pass, String name, String mail) {
 		this.userId = userId;
 		this.pass = pass;
 		this.name = name;
 		this.mail = mail;
+	}
+
+	public UserBean(String userId, String pass) {
+		this.userId = userId;
+		this.pass = pass;
 	}
 
 	public String getUserId() {
@@ -49,8 +54,8 @@ public class UserBean implements Serializable {
 		this.mail = mail;
 	}
 
-	
-	
-	
+
+
+
 
 }

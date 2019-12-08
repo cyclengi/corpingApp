@@ -1,17 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>コーピング管理アプリ</title>
 </head>
 <body>
 
-<c:out value="c:out test"></c:out>
+<p>
+コーピングを追加しました！
+</p>
+
+<p>
+<a href="/corpingApp/servlet/Main">TOPへ</a>
+</p>
 
 </body>
 </html>
