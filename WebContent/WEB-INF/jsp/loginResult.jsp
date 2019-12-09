@@ -16,7 +16,7 @@
 	<c:when test="${not empty sessionScope.loginUser }">
 		<p>ログインに成功しました</p>
 		<p>ようこそ${sessionScope.loginUser.name }さん</p>
-		<a href="/corpingApp/servlet/Main">コーピングの閲覧・管理へ</a>
+		<a href="/corpingApp/servlet/MainServlet">コーピングの閲覧・管理へ</a>
 	</c:when>
 	<c:otherwise>
 		<p>ログインに失敗しました</p>

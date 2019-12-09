@@ -12,14 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class CorpingAddServert
  */
-@WebServlet("/sevlet/CorpingAddServert")
-public class CorpingAddServert extends HttpServlet {
+@WebServlet("/servlet/CorpingAddServlet")
+public class CorpingAddServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CorpingAddServert() {
+    public CorpingAddServlet() {
         super();
         // TODO Auto-generated constructor stub
     }

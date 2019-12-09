@@ -10,7 +10,7 @@
 <h1>コーピング管理アプリへようこそ</h1>
 
 <form action="/corpingApp/servlet/LoginServlet" method="post">
-ユーザー名：<input type="text" name="name"><br>
+ユーザー名：<input type="text" name="userId"><br>
 パスワード：<input type="password" name="pass"><br>
 <input type="submit" value="ログイン">
 </form>

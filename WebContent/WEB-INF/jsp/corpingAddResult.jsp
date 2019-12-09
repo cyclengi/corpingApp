@@ -13,7 +13,7 @@
 </p>
 
 <p>
-<a href="/corpingApp/servlet/Main">TOPへ</a>
+<a href="/corpingApp/servlet/MainServlet">TOPへ</a>
 </p>
 
 </body>

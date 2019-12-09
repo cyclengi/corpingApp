@@ -11,7 +11,7 @@
 <h1>新規コーピング追加</h1>
 
 <p>
-<a href="/corpingApp/servlet/Main">TOPへ</a>
+<a href="/corpingApp/servlet/MainServlet">TOPへ</a>
 </p>
 
 <form action="/corpingApp/servlet/CorpingAddServlet" method="post">
@@ -25,7 +25,7 @@
 </p>
 
 <p>
-<input type="submit" value="送信"><input type="reset" value="リセット">
+<input type="submit" value="送信">　　<input type="reset" value="リセット">
 </p>
 </form>
 
