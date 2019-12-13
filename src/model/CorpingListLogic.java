@@ -16,12 +16,13 @@ public class CorpingListLogic {
 	}
 
 	//コーピングを挿入
-	public void postCorping(CorpingBean corpingBean) {
+	public boolean postCorping(CorpingBean corpingBean) {
 		CorpingDAO dao = new CorpingDAO();
-		dao.create(corpingBean);
+		return dao.create(corpingBean);
 	}
 
 
+	//コーピング検索
 	public List<CorpingBean> serchCorping(CorpingBean corpingBean){
 		CorpingDAO dao = new CorpingDAO();
 		List<CorpingBean> corpingBeanList = new ArrayList<CorpingBean>();

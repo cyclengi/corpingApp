@@ -1,6 +1,7 @@
 package sevlet;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import model.CorpingBean;
+import model.CorpingListLogic;
 import model.UserBean;
 
 
@@ -33,8 +36,12 @@ public class MainServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		//TODO コーピングの全リストをBOで獲得　リクエストスコープへ保存する処理を追加
+		//コーピングの全リストをBOで獲得　リクエストスコープへ保存
+		CorpingListLogic corpingListLogic = new CorpingListLogic();
+		List<CorpingBean> corpingList = corpingListLogic.getCorping();
+		request.setAttribute("corpingList", corpingList);
 
+		//ログインチェック
 		HttpSession session = request.getSession();
 		UserBean loginUser = (UserBean) session.getAttribute("loginUser");
 
