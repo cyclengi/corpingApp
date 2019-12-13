@@ -33,8 +33,8 @@
 </p>
 
 <c:forEach var="corping" items="${corpingList }">
-	<p><c:out value="${corpingList.text }" /></p>
-	<p>タグ１：<c:out value="${corpingList.tag1 }" />　タグ２：<c:out value="${corpingList.tag2 }" />　タグ３：<c:out value="${corpingList.tag3 }" /></p>
+	<p><c:out value="${corping.text }" /></p>
+	<p>タグ１：<c:out value="${corping.tag1 }" />　タグ２：<c:out value="${corping.tag2 }" />　タグ３：<c:out value="${corping.tag3 }" /></p>
 	<hr>
 </c:forEach>
 
