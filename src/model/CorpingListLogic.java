@@ -27,6 +27,20 @@ public class CorpingListLogic {
 		CorpingDAO dao = new CorpingDAO();
 		List<CorpingBean> corpingBeanList = new ArrayList<CorpingBean>();
 
+		//入力チェック。空文字の場合はnullを代入。H2の場合、空文字だと検索がうまくいかない
+		if(corpingBean.getText() == "") {
+			corpingBean.setText(null);
+		}
+		if(corpingBean.getTag1() == "") {
+			corpingBean.setTag1(null);
+		}
+		if(corpingBean.getTag2() == "") {
+			corpingBean.setTag2(null);
+		}
+		if(corpingBean.getTag3() == "") {
+			corpingBean.setTag3(null);
+		}
+
 		if(corpingBean.getText() != null) {
 			corpingBeanList = dao.textSearch(corpingBean.getText());
 		} else {

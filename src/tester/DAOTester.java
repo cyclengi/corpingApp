@@ -8,26 +8,26 @@ import model.CorpingBean;
 
 public class DAOTester {
 
-	public static void Main(String[] args) {
+	public static void main(String[] args) {
 
 		//testFindAll();
 
 		//testTextSearch("記念");
 
-		//testTagSearch("怒り", null, null);
+		testTagSearch("怒り", null, null);
 
 
-		String text = "Createのテスト1";
-		CorpingBean corpingBean = new CorpingBean(text, "怒り", "悲しみ", "憂鬱");
-		boolean result = testCreate(corpingBean);
-
-		if(result) {
-			System.out.println("正常にINSERT");
-		} else {
-			System.out.println("INSERTできず");
-		}
-
-		System.out.println("全部おわり");
+//		String text = "Createのテスト1";
+//		CorpingBean corpingBean = new CorpingBean(text, "怒り", "悲しみ", "憂鬱");
+//		boolean result = testCreate(corpingBean);
+//
+//		if(result) {
+//			System.out.println("正常にINSERT");
+//		} else {
+//			System.out.println("INSERTできず");
+//		}
+//
+//		System.out.println("全部おわり");
 
 
 	}

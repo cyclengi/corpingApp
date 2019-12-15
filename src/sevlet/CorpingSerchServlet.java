@@ -1,6 +1,7 @@
 package sevlet;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -8,6 +9,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import model.CorpingBean;
+import model.CorpingListLogic;
 
 /**
  * Servlet implementation class CorpingSerchServlet
@@ -37,6 +41,18 @@ public class CorpingSerchServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		String text = request.getParameter("text");
+		String tag1 = request.getParameter("tag1");
+		String tag2 = request.getParameter("tag2");
+		String tag3 = request.getParameter("tag3");
+
+		CorpingBean corpingBean = new CorpingBean(text, tag1, tag2, tag3);
+
+		CorpingListLogic corpingListLogic = new CorpingListLogic();
+		List<CorpingBean> corpingBeanList = corpingListLogic.serchCorping(corpingBean);
+
+		request.setAttribute("corpingList", corpingBeanList);
 
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/main.jsp");
 		dispatcher.forward(request, response);
