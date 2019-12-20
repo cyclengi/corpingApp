@@ -18,7 +18,23 @@ public class CorpingListLogic {
 	//コーピングを挿入
 	public boolean postCorping(CorpingBean corpingBean) {
 		CorpingDAO dao = new CorpingDAO();
-		return dao.create(corpingBean);
+
+		if(corpingBean.getText() == "") {
+			corpingBean.setText(null);
+		}
+		if(corpingBean.getTag1() == "") {
+			corpingBean.setTag1(null);
+		}
+		if(corpingBean.getTag2() == "") {
+			corpingBean.setTag2(null);
+		}
+		if(corpingBean.getTag3() == "") {
+			corpingBean.setTag3(null);
+		}
+
+		boolean result = dao.create(corpingBean);
+
+		return result;
 	}
 
 

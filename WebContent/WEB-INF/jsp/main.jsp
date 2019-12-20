@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
 
 <!DOCTYPE html>
@@ -33,11 +34,16 @@
 </p>
 
 <c:forEach var="corping" items="${corpingList }">
-	<p><c:out value="${corping.text }" /></p>
+	<p>
+	<c:forEach var="s" items="${fn:split(corping.text, '
+	')}">
+	    <div>${s}</div>
+	</c:forEach>
+
+	</p>
 	<p>タグ１：<c:out value="${corping.tag1 }" />　タグ２：<c:out value="${corping.tag2 }" />　タグ３：<c:out value="${corping.tag3 }" /></p>
 	<hr>
 </c:forEach>
-
 
 </body>
 </html>
