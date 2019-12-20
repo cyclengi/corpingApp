@@ -25,7 +25,7 @@ public class CorpingDAO {
 			Class.forName(DRIVER_NAME);
 			conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
 
-			String sql = "SELECT ID,TEXT,TAG1,TAG2,TAG3 FROM CORPING";
+			String sql = "SELECT ID,TEXT,TAG1,TAG2,TAG3 FROM CORPING ORDER BY ID DESC";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			ResultSet rs = pStmt.executeQuery();
@@ -70,7 +70,7 @@ public class CorpingDAO {
 			Class.forName(DRIVER_NAME);
 			conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
 
-			String sql = "SELECT ID,TEXT,TAG1,TAG2,TAG3 FROM CORPING WHERE TEXT LIKE ?";
+			String sql = "SELECT ID,TEXT,TAG1,TAG2,TAG3 FROM CORPING WHERE TEXT LIKE ? ORDER BY ID DESC";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			pStmt.setString(1, "%" + serchWord + "%");
 
@@ -117,7 +117,7 @@ public class CorpingDAO {
 			conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
 
 			String sql = "SELECT ID,TEXT,TAG1,TAG2,TAG3 FROM CORPING "
-					+ "WHERE (TAG1 IN (?, ?, ?)) OR (TAG2 IN (?, ?, ?)) OR (TAG3 IN (?, ?, ?))";
+					+ "WHERE (TAG1 IN (?, ?, ?)) OR (TAG2 IN (?, ?, ?)) OR (TAG3 IN (?, ?, ?)) ORDER BY ID DESC";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			pStmt.setString(1, serchTag1);
 			pStmt.setString(2, serchTag2);
