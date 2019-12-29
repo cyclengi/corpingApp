@@ -1,9 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="<c:url value="/CSS/logonStyle.css" />" >
 <title>新規ユーザー登録</title>
 </head>
 <body>
@@ -49,7 +51,7 @@
 			</select>
 		</dd>
 	</dl>
-	<input type="submit" value="送信">　　<input type="reset" value="クリア">
+	<p class="submit"><input type="submit" value="送信する"><input type="reset" value="クリア"></p>
 </form>
 
 </body>
