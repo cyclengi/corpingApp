@@ -11,12 +11,14 @@
 <title>コーピング管理アプリ</title>
 </head>
 <body>
+
+<!-- main div class="header"にする -->
 <h1>コーピング管理アプリ　メイン</h1>
 <p>
 <c:out value="${loginUser.name}" />さん、ログイン中
 </p>
 
-
+<!-- headerにする -->
 <p>
 <a href="/corpingApp/servlet/MainServlet">TOPへ</a>
 </p>
@@ -33,6 +35,10 @@
 <a href="/corpingApp/servlet/LogoutServlet">ログアウト</a>
 </p>
 
+<!-- 
+	main div class="inner"にする
+	コーピング１つごと＝１ループごとにDIVで分割。DIVにclassを与えて管理。
+ -->
 <c:forEach var="corping" items="${corpingList }">
 	<p>
 	<c:forEach var="s" items="${fn:split(corping.text, '

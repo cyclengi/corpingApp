@@ -10,6 +10,9 @@
 </head>
 <body>
 
+<!-- <header>部分からメニューを削除　ログインチェック関連により -->
+
+
 <p>
 <c:out value="${requestScope.msg}" />
 </p>

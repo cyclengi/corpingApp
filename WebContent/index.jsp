@@ -7,6 +7,9 @@
 <title>コーピング管理アプリログイン</title>
 </head>
 <body>
+
+<!-- <header>部分からメニューを削除　ログインチェック関連により -->
+
 <h1>コーピング管理アプリへようこそ</h1>
 
 <form action="/corpingApp/servlet/LoginServlet" method="post">
