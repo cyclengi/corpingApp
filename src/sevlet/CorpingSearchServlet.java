@@ -14,16 +14,16 @@ import model.CorpingBean;
 import model.CorpingListLogic;
 
 /**
- * Servlet implementation class CorpingSerchServlet
+ * Servlet implementation class CorpingSearchServlet
  */
-@WebServlet("/servlet/CorpingSerchServlet")
-public class CorpingSerchServlet extends HttpServlet {
+@WebServlet("/servlet/CorpingSearchServlet")
+public class CorpingSearchServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CorpingSerchServlet() {
+    public CorpingSearchServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -33,7 +33,7 @@ public class CorpingSerchServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/corpingSerch.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/corpingSearch.jsp");
 		dispatcher.forward(request, response);
 	}
 

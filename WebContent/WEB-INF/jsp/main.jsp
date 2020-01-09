@@ -8,48 +8,48 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="<c:url value="/CSS/normalize.css" />" >
+<link rel="stylesheet" href="<c:url value="/CSS/style.css" />" >
 <title>コーピング管理アプリ</title>
 </head>
-<body>
+<body class="home">
 
-<!-- main div class="header"にする -->
-<h1>コーピング管理アプリ　メイン</h1>
-<p>
-<c:out value="${loginUser.name}" />さん、ログイン中
-</p>
+	<header>
+		<h1><a href="/corpingApp/servlet/MainServlet">コーピングアップ！</a></h1>
+		<nav>
+			<ul>
+				<li><a href="/corpingApp/servlet/MainServlet">TOPへ</a></li>
+				<li><a href="/corpingApp/servlet/CorpingSearchServlet">コーピング検索</a></li>
+				<li><a href="/corpingApp/servlet/CorpingAddServlet">コーピング登録</a></li>
+				<li><a href="/corpingApp/servlet/LogoutServlet">ログアウト</a></li>
+			</ul>
+		</nav>
+	</header>
 
-<!-- headerにする -->
-<p>
-<a href="/corpingApp/servlet/MainServlet">TOPへ</a>
-</p>
+	<main>
+		<div class="title">
+			<h1>コーピングアップ！メイン</h1>
+			<p class="username"><c:out value="${loginUser.name}" />さん、ログイン中</p>
+		</div>
 
-<p>
-<a href="/corpingApp/servlet/CorpingSerchServlet">コーピング検索</a>
-</p>
+		<div class="inner">
+			<c:forEach var="corping" items="${corpingList }">
+				<div class="nested">
+					<c:forEach var="s" items="${fn:split(corping.text, '
+					')}">
+						<p>${s}</p>
+					</c:forEach>
+					<p><c:out value="${corping.tag1 }" />　<c:out value="${corping.tag2 }" />　<c:out value="${corping.tag3 }" /></p>
+				</div>
+			</c:forEach>
 
-<p>
-<a href="/corpingApp/servlet/CorpingAddServlet">新規コーピング登録</a>
-</p>
+		</div>
+	</main>
 
-<p>
-<a href="/corpingApp/servlet/LogoutServlet">ログアウト</a>
-</p>
+	<footer>
+        <p><small>&copy; Cyclengi 2020</small></p>
+    </footer>
 
-<!-- 
-	main div class="inner"にする
-	コーピング１つごと＝１ループごとにDIVで分割。DIVにclassを与えて管理。
- -->
-<c:forEach var="corping" items="${corpingList }">
-	<p>
-	<c:forEach var="s" items="${fn:split(corping.text, '
-	')}">
-	    <div>${s}</div>
-	</c:forEach>
-
-	</p>
-	<p>タグ１：<c:out value="${corping.tag1 }" />　タグ２：<c:out value="${corping.tag2 }" />　タグ３：<c:out value="${corping.tag3 }" /></p>
-	<hr>
-</c:forEach>
-
+	
 </body>
 </html>

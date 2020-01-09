@@ -6,20 +6,29 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="<c:url value="/CSS/normalize.css" />" >
+<link rel="stylesheet" href="<c:url value="/CSS/style.css" />" >
 <title>ユーザ登録結果</title>
 </head>
 <body>
+    <header>
+		<h1><a href="/corpingApp/servlet/MainServlet">コーピングアップ！</a></h1>
+		<nav>
+			
+		</nav>
+	</header>
 
-<!-- <header>部分からメニューを削除　ログインチェック関連により -->
+    <p>
+    <c:out value="${requestScope.msg}" />
+    </p>
 
+    <p>
+    <a href="/corpingApp/">ログイン画面へ</a>
+    </p>
 
-<p>
-<c:out value="${requestScope.msg}" />
-</p>
-
-<p>
-<a href="/corpingApp/">ログイン画面へ</a>
-</p>
+    <footer>
+        <p><small>&copy; Cyclengi 2020</small></p>
+    </footer>
 
 </body>
 </html>

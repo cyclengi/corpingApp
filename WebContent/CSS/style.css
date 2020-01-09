@@ -1,0 +1,223 @@
+@charset "UTF-8";
+
+body{
+    line-height: 1.7;
+    font-size: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #000;
+}
+
+a,
+a:link{
+    color: #3585b7;
+}
+a:visited{
+    color: #6252b7;
+}
+a:hover{
+    text-decoration: none;
+    color: #555;
+}
+
+/* header */
+header{
+	display: flex;
+    background-color: #ede6e6;
+}
+header h1 a,
+header h1 a:link,
+header h1 a:visited{
+	display: block;
+	margin: 10px;
+	color: #000;
+	text-decoration: none;
+	font-style: italic;
+}
+header h1 a:hover{
+	color: #888;
+}
+header nav{
+    margin: 0 0 0 auto;
+}
+header nav ul{
+    list-style-type: none;
+    margin: 20px 0;
+    padding: 0;
+    display: flex;
+}
+header nav ul li a,
+header nav ul li a:link,
+header nav ul li a:visited{
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #000;
+}
+header nav ul li a:hover{
+    color: #888;
+}
+
+
+
+/* footer */
+footer{
+    background-color: #ede6e6;
+    padding: 20px;
+}
+footer ul{
+    list-style-type: none;
+    margin: 0 0 5px;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+footer ul li{
+    margin: 0 0 0 20px;
+}
+footer ul li a,
+footer ul li a:link,
+footer ul li a:visited{
+    text-decoration: none;
+    font-size: 13px;
+    color: #000;
+}
+footer ul li a:hover{
+    color: #888888;
+}
+footer p{
+    margin: 0;
+    text-align: right;
+    color: #888;
+}
+
+/* main */
+main .inner{
+    width: 990px;
+    margin: 50px auto;
+}
+main h2{
+    margin: 50px 0 20px;
+    font-weight: normal;
+    font-size: 25px;
+    color: #7f6666;
+}
+main p{
+    margin: 0 0 15px;
+}
+main dl{
+    width: 100%;
+}
+main dl dt{
+    float: left;
+    clear: both;
+    padding: 10px 0;
+    color: #998484;
+}
+main dl dd{
+    border-bottom: solid 1px #cccccc;
+    margin: 0;
+    padding: 10px 0 10px 15%;
+}
+
+main .title {
+    padding: 50px;
+    background: #f4e3e3;
+}
+
+main .title h1{
+    margin: 0;
+    line-height: 1;
+    font-size: 40px;
+	color: #7f6666;
+	float: left;
+	clear: both;
+}
+
+main .title p.username{
+	text-align: right;
+	color: #888888;
+}
+
+main .title ol{
+    list-style-type: none;
+    margin: 20px 0 0;
+    padding: 0;
+    display: flex;
+}
+
+main .title ol{
+    font-size: 13px;
+}
+
+main .title ol li::after{
+    content: ">";
+    margin: 0 5px 0 10px;
+}
+
+main .title ol li:last-child::after{
+    content: none;
+}
+
+main ul{
+    margin: 0 0 60px;
+    padding: 0 0 0 20px;
+}
+
+/* form */
+/* (logon.jspとして作成。その他formにも使い回す)  */
+input[type="email"]{
+    width: 50%;
+}
+
+main .must{
+    color: #d23939;
+}
+
+input {
+    font-size: 1em;
+    padding: 5px;
+	margin-right: 1em;
+	margin-left: 1em;
+}
+
+textarea{
+    width: 30em;
+    font-size: 1em;
+    padding: 5px;
+}
+
+
+input[type="submit"]{
+	padding: 20px 100px;
+	background: #7f6666;
+	color: #ffffff;
+	font-weight: bold;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+input[type="reset"]{
+	padding: 5px 20px;
+	background: #7f6666;
+	color: #ffffff;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover{
+	opacity: 0.8;
+}
+
+/* index */
+
+/* home(main.jsp) */
+.home main .nested{
+	margin-top: 50px;
+}
+
+/* corpingAdd.jsp */
+/* corpingSearch.jsp */
+/* logon.jsp */
+
+
