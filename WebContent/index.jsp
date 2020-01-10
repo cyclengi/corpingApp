@@ -21,7 +21,6 @@
 	<main>
 		<div class="title">
 			<h1>コーピングアップ！</h1>
-			
 		</div>
 
 		<div class="inner">

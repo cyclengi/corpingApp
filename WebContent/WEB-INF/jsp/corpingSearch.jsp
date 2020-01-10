@@ -33,7 +33,7 @@
             <form action="/corpingApp/servlet/CorpingSearchServlet" method="post">
                 <h2>テキスト内容からコーピングを検索：</h2>
                 <p>
-                <input type="text" name="text" size="10">
+                <input type="text" name="text" size="30">
                 </p>
             
                 <p>
