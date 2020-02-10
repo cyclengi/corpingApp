@@ -11,10 +11,10 @@ import model.UserBean;;
 
 public class UserDAO {
 
-	private final String DRIVER_NAME = "org.h2.Driver";
-	private final String JDBC_URL = "jdbc:h2:file:C:/data/corpingApp";
-	private final String DB_USER = "sa";
-	private final String DB_PASS = "1234";
+	private final String DRIVER_NAME = "org.mariadb.jdbc.Driver";
+	private final String JDBC_URL = "jdbc:mariadb://127.0.0.1/corpingApp";
+	private final String DB_USER = "javauser";
+	private final String DB_PASS = "hidebu33";
 
 	public UserBean authenticationUser(UserBean userBean){
 		Connection conn = null;
