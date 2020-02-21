@@ -13,7 +13,7 @@
 <body class="corpingAdd">
 
 	<header>
-		<h1><a href="/corpingApp/servlet/MainServlet">コーピングアップ！</a></h1>
+		<h1><a href="/corpingApp/servlet/MainServlet">コーピングアップ！ (α)</a></h1>
 		<nav>
 			<ul>
 				<li><a href="/corpingApp/servlet/MainServlet">TOPへ</a></li>

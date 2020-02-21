@@ -12,7 +12,7 @@
 </head>
 <body class="index">
     <header>
-		<h1><a href="/corpingApp/servlet/MainServlet">コーピングアップ！</a></h1>
+		<h1><a href="/corpingApp/servlet/MainServlet">コーピングアップ！ (α)</a></h1>
 		<nav>
 			
 		</nav>
@@ -20,7 +20,7 @@
 
 	<main>
 		<div class="title">
-			<h1>コーピングアップ！</h1>
+			<h1>コーピングアップ！ (α)</h1>
 		</div>
 
 		<div class="inner">
