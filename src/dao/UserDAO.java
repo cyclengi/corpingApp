@@ -12,7 +12,7 @@ import model.UserBean;;
 public class UserDAO {
 
 	private final String DRIVER_NAME = "org.mariadb.jdbc.Driver";
-	private final String JDBC_URL = "jdbc:mariadb://127.0.0.1/corpingApp";
+	private final String JDBC_URL = "jdbc:mariadb://127.0.0.1:3306/corpingApp";
 	private final String DB_USER = "javauser";
 	private final String DB_PASS = "hidebu33";
 
